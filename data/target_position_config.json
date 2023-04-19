@@ -1,0 +1,61 @@
+{
+  "Experienced FAANG developer": {
+    "employer": {
+      "check_last_n_experiences": 2,
+      "name": "FAANG"
+    },
+    "location": {
+      "cities": ["London"],
+      "countries": ["UK"]
+    },
+    "experience_total": {
+      "comparison_operand": ">",
+      "years": 8
+    },
+    "skills_at_work": {
+      "check_last_n_experiences": 1,
+      "name": [
+        "python",
+        "c++"
+      ]
+    },
+    "position": {
+      "check_last_n_experiences": 1,
+      "name": [
+        "backend developer",
+        "software engineer"
+      ]
+    }
+  },
+  "Middle UX-designer": {
+    "location": {
+      "countries": ["EU"],
+      "cities": []
+    },
+    "duration_of_employment": {
+      "check_last_n_experiences": 1,
+      "comparison_operand": ">=",
+      "years": 2
+    },
+    "experience_total": {
+      "comparison_operand": "<",
+      "years": 5
+    },
+    "skills": {
+      "name": [
+        "Figma",
+        "Sketch",
+        "UX-research",
+        "Miro"
+      ],
+      "number_of_hits": 2
+    },
+    "position": {
+      "check_last_n_experiences": 2,
+      "name": [
+        "product designer",
+        "ux-designer"
+      ]
+    }
+  }
+}
