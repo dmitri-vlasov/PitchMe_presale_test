@@ -3,6 +3,7 @@ import unittest
 
 from match_service import utils
 
+
 TEST_NON_OVERLAPPING_INTERVALS = [
     [datetime.date(2014, 7, 20), datetime.date(2018, 10, 18)],
     [datetime.date(2019, 1, 8), datetime.date(2020, 9, 13)],

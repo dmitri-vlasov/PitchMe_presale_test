@@ -42,9 +42,15 @@ def main() -> None:
     target_specification = chain_specifications_for_position(target_position_criteria)
 
     # parse given profiles
-    available_profiles = pydantic.parse_file_as(
-        path=profiles_file_path, type_=List[Profile]
-    )
+    available_profiles = []
+    # Use iterative JSON parser for large JSON inputs (e.g. ijson library) in production environment
+    for profile in json.load(open(profiles_file_path)):
+        try:
+            valid_profile = Profile(**profile)
+        except pydantic.ValidationError:
+            print("Candidate provided invalid data - profile will not be considered.")
+        else:
+            available_profiles.append(valid_profile)
 
     # perform checks on each profile
     for profile in available_profiles:
